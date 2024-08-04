@@ -1,0 +1,15 @@
+local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local Window = Library.CreateLib("Unbox a UGC", "DarkTheme")
+local Tab = Window:NewTab("SCRIPT")
+local Section = Tab:NewSection("NOTE: AUTO UNBOX UGC NEVER STOP")
+Section:NewButton("AUTO UNBOX UGC", "ButtonInfo", function()
+while true do 
+wait(0.1)
+local args = {
+    [1] = "Box1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("RollOut"):FireServer(unpack(args))
+    print("Clicked")
+end
+end)
